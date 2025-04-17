@@ -1,0 +1,123 @@
+/* App.css */
+
+.App {
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body {
+  height: 100% !important;
+  width: 100% !important;
+  background-image: url('C:\Users\Aarav\Documents\GitHub\string-theory-game\frontend\src\assets\Cosmic background with stars connected to each other.png') !important;
+  background-size: cover;
+  background-size: cover;
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh !important; /* Center content vertically and horizontally */
+}
+
+.overlay {
+
+  padding: 40px 60px;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(65, 38, 218);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1.5s ease-out;
+}
+
+.game-title {
+  font-size: 100px !important;
+  font-family: 'Orbitron', sans-serif; /* A futuristic/cosmic font */
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(90deg, #ff8c00, #ff007f, #7f00ff, #1e90ff); /* Cosmic gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Makes the gradient text visible */
+  text-shadow: 0 0 5px black, 0 0 10px black; /* Black outline with glow effect */
+  animation: fadeInText 1s forwards, cosmicGlow 2s infinite alternate;
+}
+
+@keyframes cosmicGlow {
+  from {
+    text-shadow: 0 0 5px black, 0 0 10px gray, 0 0 15px #7f00ff, 0 0 20px #ff007f;
+  }
+  to {
+    text-shadow: 0 0 5px black, 0 0 15px #1e90ff, 0 0 25px #ff8c00, 0 0 35px #ff007f;
+  }
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(90px);
+  animation: fadeInText 1s forwards;
+}
+
+.get-started-button {
+  background: linear-gradient(90deg, rgba(255, 140, 0, 0.3), rgba(255, 0, 127, 0.3), rgba(127, 0, 255, 0.3), rgba(30, 144, 255, 0.3)); /* Slightly more opaque cosmic gradient */
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  /* Subtle glow and black outline */
+  box-shadow: 0px 0px 4px black, 0px 0px 8px rgba(255, 140, 0, 0.4); /* Slightly more visible glow */
+  text-shadow: 
+    0px 0px 2px black, 
+    0px 0px 4px black, 
+    0px 0px 6px rgba(255, 0, 127, 0.4); /* Slightly more visible text shadow */
+
+  /* Smooth transitions */
+  transition: box-shadow 0.3s ease, transform 0.2s ease, background 0.3s ease;
+  
+  /* Subtle bouncing animation */
+  animation: bounce 1.5s infinite;
+}
+
+/* Hover effect */
+.get-started-button:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0px 0px 6px black, 0px 0px 12px rgba(30, 144, 255, 0.5), 0px 0px 16px rgba(127, 0, 255, 0.5); /* More visible glow on hover */
+  background: linear-gradient(90deg, rgba(255, 140, 0, 0.5), rgba(255, 0, 127, 0.5), rgba(127, 0, 255, 0.5), rgba(30, 144, 255, 0.5)); /* More opaque on hover */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(80px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
